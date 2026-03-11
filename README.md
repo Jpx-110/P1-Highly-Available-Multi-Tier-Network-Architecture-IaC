@@ -32,6 +32,8 @@ This project applies that same logic to cloud infrastructure:
 ---
 
 ## Architecture Diagram
+
+![AWS VPC Architecture](diagrams/vpc-diagram.png)
 ```
 Internet
     │
