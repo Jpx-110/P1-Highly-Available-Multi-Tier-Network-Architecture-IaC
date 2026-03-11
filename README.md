@@ -1,4 +1,4 @@
-# Secure Multi-Tier AWS Network Architecture
+# P1 - Highly Available Multi-Tier Network Architecture (IaC)
 ### Built with Terraform (Infrastructure as Code) | AWS | Cloud Security
 
 ---
@@ -6,7 +6,7 @@
 ## Overview
 
 This project builds a secure network environment on AWS using Terraform — 
-a tool that lets you provision and spin up infrastructure as code rather than clicking 
+a tool that lets you provision and spin up infrastructure as code, rather than clicking 
 through the AWS Console manually.
 
 The goal is to show how you can separate public-facing resources from 
@@ -25,9 +25,9 @@ never leave the vault accesible to anyone.
 
 This project applies that same logic to cloud infrastructure:
 
-- The **Public Subnet** is the front desk — it faces the internet
-- The **Private Subnet** is the vault — it is completely hidden from the internet
-- **Security Groups** are the security guards — they decide who is allowed in and out
+- The **Public Subnet** is the front desk > it faces the internet
+- The **Private Subnet** is the vault > it is completely hidden from the internet
+- **Security Groups** are the security guards > they decide who is allowed in and out
 
 ---
 
@@ -77,13 +77,12 @@ Internet Gateway (IGW)
 ## Key Security Decisions
 
 **London region (eu-west-2)**
-All infrastructure is deployed in the UK, ensuring data stays within 
-UK jurisdiction.
+All infrastructure is deployed in the UK, primarily for low-latency connectivity to local users and strict data sovereignty compliance. 
 
 **Private subnet has no internet route**
 This is intentional. The private subnet's route table has no path to the 
 internet gateway — meaning anything inside it simply cannot be reached 
-from the outside world, even by accident.
+from the outside world.
 
 **HTTPS only**
 The public subnet only accepts encrypted traffic on port 443. 
@@ -106,7 +105,7 @@ nothing else.
 ### Steps
 ```bash
 # 1. Clone this repository to your machine
-git clone https://github.com/YOUR_USERNAME/aws-vpc-terraform.git
+git clone https://github.com/Jpx-110/P1-Highly-Available-Multi-Tier-Network-Architecture-IaC-.git
 cd aws-vpc-terraform
 
 # 2. Initialise Terraform (downloads the necessary AWS plugin)
