@@ -121,6 +121,6 @@ to remove all resources and ensure no ongoing costs.
 
 **Jamil Chowdhury**  
 AWS Certified Cloud Practitioner  
-[LinkedIn](https://linkedin.com/in/YOUR_PROFILE) | [GitHub](https://github.com/YOUR_USERNAME)
+[LinkedIn](https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin) | [GitHub](https://github.com/Jpx-110)
 
 
