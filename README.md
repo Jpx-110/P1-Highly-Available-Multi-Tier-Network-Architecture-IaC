@@ -35,34 +35,6 @@ This project applies that same logic to cloud infrastructure:
 
 ![AWS VPC Architecture](vpc-diagram.png)
 ```
-Internet
-    │
-    ▼
-Internet Gateway (IGW)
-    │
-    ▼
-┌─────────────────────────────────────┐
-│           VPC: 10.0.0.0/16          │
-│        (Our private network)        │
-│                                     │
-│  ┌──────────────────────────────┐   │
-│  │  Public Subnet: 10.0.1.0/24  │   │
-│  │  (Faces the internet)        │   │
-│  │  Only HTTPS traffic allowed  │   │
-│  └──────────────┬───────────────┘   │
-│                 │                   │
-│        Internal traffic only        │
-│                 │                   │
-│  ┌──────────────▼───────────────┐   │
-│  │  Private Subnet: 10.0.2.0/24 │   │
-│  │  (Hidden from the internet)  │   │
-│  │  Only talks to public subnet │   │
-│  └──────────────────────────────┘   │
-└─────────────────────────────────────┘
-```
-
----
-
 ## What Gets Built
 
 | Resource | What It Does |
