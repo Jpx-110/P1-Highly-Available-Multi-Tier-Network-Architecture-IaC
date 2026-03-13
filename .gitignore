@@ -1,0 +1,13 @@
+# Local .terraform folder (contains the "drivers")
+**/.terraform/*
+
+# State files (contains your infrastructure "memory")
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+
+# Variables files (where you might keep secrets later)
+*.tfvars
+*.tfvars.json
